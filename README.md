@@ -12,6 +12,7 @@ This project demonstrates how to build a simple Retrieval-Augmented Generation (
   - [Python Environment](#python-environment)  
 - [Model Setup](#model-setup)  
 - [Running the Notebook](#running-the-notebook)  
+- [Running the Streamlit App](#running-the-streamlit-app)  
 - [Usage](#usage)  
 - [Troubleshooting](#troubleshooting)  
 - [Contributing](#contributing)  
@@ -36,8 +37,9 @@ Ollama is required to run local LLMs and interact with them via the Python clien
 
 1. **Install Ollama CLI:**
 
-   Using Homebrew (recommended):
+Using Homebrew (recommended):
 
+brew install ollama
 
 Or download the installer from the official website:  
 [https://ollama.com/download/mac](https://ollama.com/download/mac)
@@ -52,8 +54,6 @@ ollama pull hf.co/bartowski/Llama-3.2-1B-Instruct-GGUF:latest
 
 4. **List installed models:**
 
-ollama list
-
 ---
 
 ### Python Environment
@@ -66,7 +66,6 @@ source venv/bin/activate
 2. **Install Python dependencies:**
 
 pip install -r requirements.txt
-
 
 ---
 
@@ -92,11 +91,28 @@ jupyter notebook
 
 ---
 
+## Running the Streamlit App
+
+This project includes a Streamlit app that provides an interactive chat interface for the RAG system.
+
+1. **Ensure your virtual environment is activated and dependencies are installed.**
+
+2. **Run the Streamlit app:**
+
+streamlit run streamlit_app.py
+
+3. **Open the URL shown in your terminal (usually http://localhost:8501) in a web browser.**
+
+4. **Use the input box to ask questions, and the app will retrieve relevant context chunks and generate answers using the Ollama LLM model.**
+
+---
+
 ## Usage
 
 - Modify the `query` variable in the notebook to ask different questions.  
 - Add or update documents in the knowledge base by editing the dataset or adding new chunks.  
-- Experiment with prompt templates to improve answer quality.
+- Experiment with prompt templates to improve answer quality.  
+- Use the Streamlit app for an interactive chat experience with retrieval-augmented generation.
 
 ---
 
@@ -129,4 +145,5 @@ This project is licensed under the MIT License.
 ---
 
 *Developed by Samie on macOS using RAG with Hugging Face and Ollama.*  
-*For questions or help, contact: [your-email@example.com]*
+*For questions or help, contact: [sahebsamie@gmail.com]*
+
