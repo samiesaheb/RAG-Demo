@@ -3,3 +3,6 @@ sentence-transformers
 faiss-cpu
 transformers
 ollama
+langchain 
+langchain-huggingface
+streamlit
